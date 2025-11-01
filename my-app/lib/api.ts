@@ -17,3 +17,9 @@ export async function getDetailPost(id: number): Promise<Post> {
   const post = await res.json();
   return post;
 }
+
+export async function getAllPost(): Promise<Post[]> {
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const posts = await response.json();
+  return posts as Post[];
+}
