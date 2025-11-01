@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 function Header() {
   return (
@@ -7,13 +8,22 @@ function Header() {
       <header className="header">
         <nav>
           <div className="logo">
-            <Link href="/"> <Image src={"https://cdn-icons-png.flaticon.com/512/5339/5339181.png"} width={50} height={50} alt="NextJS"/> </Link>
+            <Link href="/">
+              {" "}
+              <Image
+                src={"https://cdn-icons-png.flaticon.com/512/5339/5339181.png"}
+                width={50}
+                height={50}
+                alt="NextJS"
+              />{" "}
+            </Link>
           </div>
           <div className="nav-links">
             <Link href="/">Home</Link>
             <Link href="/posts">Posts</Link>
             <Link href="/about">About</Link>
           </div>
+          <ThemeSwitcher />
         </nav>
       </header>
     </div>
